@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<meta name="theme-color" content="#000000" />
+
+		%sapper.base%
+
+		<link rel="stylesheet" type="text/css" href="app.css" />
+		<link
+			rel="manifest"
+			href="manifest.json"
+			crossorigin="use-credentials"
+		/>
+		<link rel="icon" type="image/png" href="assets/favicon.png" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta
+			name="apple-mobile-web-app-status-bar-style"
+			content="black-translucent"
+		/>
+
+		%sapper.styles% %sapper.head%
+	</head>
+	<body>
+		<div id="app">%sapper.html%</div>
+		%sapper.scripts%
+	</body>
+</html>
