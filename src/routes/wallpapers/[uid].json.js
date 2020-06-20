@@ -10,7 +10,7 @@ export async function get(req, res, next) {
 			let date = new Date(wallpaper.data.date);
 			let month = date.getMonth().toString().padStart(2, '0');
 			let day = date.getDate().toString().padStart(2, '0');
-			return `${date.getFullYear()}.${day}.${month}`;
+			return `${day}.${month}.${date.getFullYear()}`;
 		})();
 
 		let credits = wallpaper.data.body.find(slice => {

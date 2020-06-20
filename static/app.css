@@ -181,12 +181,13 @@ header {
 
 .title {
 	display: inline-block;
-	font-size: 12.8pt;
+	font-size: 16.8pt;
 	line-height: normal;
 	color: white;
 }
 
 .title h1 {
+	font-size: 12pt;
 	padding-bottom: 4px;
 }
 
