@@ -22,17 +22,13 @@
 	<meta name="twitter:creator" content="@thatmirac" />
 	<meta name="twitter:creator:id" content="1153786059718889472" />
 	<meta name="twitter:description" content="Wallpapers by Mirac" />
-	<meta name="twitter:title" content="Home • Wallpapers by Mirac" />
-	<meta
-		name="twitter:image"
-		content="/static/d47347aef01a7ad3ee41717a17e49338/twitter_card.jpg" />
-	<meta name="twitter:image:alt" content="Home" />
+	<meta name="twitter:title" content={data.name} />
+	<meta name="twitter:image" content={data.preview} />
+	<meta name="twitter:image:alt" content={data.name} />
 	<meta name="og:type" content="website" />
-	<meta name="og:title" content="Home" />
+	<meta name="og:title" content={data.name} />
 	<meta name="og:site_name" content="thatmirac.com" />
-	<meta
-		name="og:image"
-		content="/static/d47347aef01a7ad3ee41717a17e49338/twitter_card.jpg" />
+	<meta name="og:image" content={data.preview} />
 	<meta name="description" content="Wallpapers by Mirac" />
 </svelte:head>
 
@@ -144,19 +140,23 @@
 			</div>
 		</div>
 		<div class="seperator" />
-		<div class="related-section">
-			<div class="subtitle" id="related-title">
-				<h1>More Like This</h1>
+		{#if data.related.length > 0}
+			<div class="related-section">
+				<div class="subtitle" id="related-title">
+					<h1>More Like This</h1>
+				</div>
+				<div class="related-wrapper">
+					{#each data.related as wallpaper}
+						<a href={`/wallpapers/${wallpaper.uid}`}>
+							<img
+								src={wallpaper.preview}
+								alt={`${wallpaper.name} Image`} />
+						</a>
+					{/each}
+					<p />
+				</div>
 			</div>
-			<div class="related-wrapper">
-				{#each data.related as wallpaper}
-					<img
-						src={wallpaper.preview}
-						alt={`${wallpaper.name} Image`} />
-				{/each}
-				<p />
-			</div>
-		</div>
+		{/if}
 		<div class="seperator" />
 		<div class="footer" id="wppagefooter">
 			<p>©{new Date().getFullYear()}, Mirac</p>

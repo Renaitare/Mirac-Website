@@ -9,7 +9,8 @@ export async function get(req, res, next) {
 		let date = (function () {
 			let date = new Date(wallpaper.data.date);
 			let month = date.getMonth().toString().padStart(2, '0');
-			return `${date.getFullYear()}.${month}.${date.getDate()}`;
+			let day = date.getDate().toString().padStart(2, '0');
+			return `${date.getFullYear()}.${day}.${month}`;
 		})();
 
 		let credits = wallpaper.data.body.find(slice => {
@@ -30,10 +31,13 @@ export async function get(req, res, next) {
 
 		let related = [];
 		wallpaper.data.related.forEach(data => {
-			related.push({
-				name: data.wallpaper.data.name[0].text,
-				preview: data.wallpaper.data.preview.url,
-			});
+			if (data.wallpaper.data) {
+				related.push({
+					name: data.wallpaper.data.name[0].text,
+					preview: data.wallpaper.data.preview.url,
+					uid: data.wallpaper.slug,
+				});
+			}
 		});
 
 		let data = {
