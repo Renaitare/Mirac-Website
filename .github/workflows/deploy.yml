@@ -19,5 +19,6 @@ jobs:
             - run: yarn
             - run: yarn run build
             - run: pm2 reload ecosystem.config.js
+            - run: pm2 save
               env:
                   CI: true
