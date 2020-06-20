@@ -6,12 +6,12 @@
 	<meta name="twitter:creator:id" content="1153786059718889472" />
 	<meta name="twitter:description" content="Wallpapers by Mirac" />
 	<meta name="twitter:title" content="Credits • Wallpapers by Mirac" />
-	<meta name="twitter:image" content="assets/card.jpg" />
+	<meta name="twitter:image" content="assets/card.png" />
 	<meta name="twitter:image:alt" content="Credits" />
 	<meta name="og:type" content="website" />
 	<meta name="og:title" content="Credits" />
 	<meta name="og:site_name" content="thatmirac.com" />
-	<meta name="og:image" content="assets/card.jpg" />
+	<meta name="og:image" content="assets/card.png" />
 	<meta name="description" content="Wallpapers by Mirac" />
 </svelte:head>
 
