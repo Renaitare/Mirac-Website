@@ -1,7 +1,7 @@
 module.exports = {
 	apps: [
 		{
-			name: 'mirac',
+			name: 'mellow',
 			script: '__sapper__/build',
 			env: {
 				NODE_ENV: 'production',
