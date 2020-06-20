@@ -17,7 +17,7 @@
 
 <svelte:head>
 	<title>Home</title>
-	<link rel="canonical" href={`https://thatmirac.com/wallpapers/${uid}`} />
+	<link rel="canonical" href="https://thatmirac.com/wallpapers/" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:creator" content="@thatmirac" />
 	<meta name="twitter:creator:id" content="1153786059718889472" />

@@ -12,7 +12,7 @@
 <div class="showcase">
 	<span>
 		<h1>{status}</h1>
-		<h3>{error.message}</h3>
+		<h3 style="color: white;">{error.message}</h3>
 		{#if dev && error.stack}
 			<pre style="color: white; margin-top: 48px;">{error.stack}</pre>
 		{/if}

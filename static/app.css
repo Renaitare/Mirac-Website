@@ -196,7 +196,7 @@ header {
 
 .credits-section {
 	display: flex;
-	margin-top: 24px;
+	margin-top: 14px;
 	margin-bottom: 12px;
 	margin-left: 24px;
 	margin-right: 26px;
@@ -272,7 +272,7 @@ header {
 	width: 100%;
 	display: grid;
 	margin-top: 16px;
-	margin-bottom: 156px;
+	margin-bottom: 0px;
 	grid-template-columns: 30% 30% 30%;
 	grid-template-rows: 100% 100%;
 	grid-column-gap: 5%;
@@ -513,6 +513,7 @@ header {
 	}
 
 	.get-button-container {
+		display: none;
 		width: 100%;
 		align-self: flex-end;
 		padding-bottom: 3px;
