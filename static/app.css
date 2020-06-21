@@ -1,19 +1,19 @@
 @font-face {
 	font-family: 'SF Display';
 	font-weight: 700;
-	src: url('https://sf.abarba.me/SF-UI-Display-Bold.otf');
+	src: url('fonts/SF-UI-Display-Bold.otf');
 }
 
 @font-face {
 	font-family: 'SF Text';
 	font-weight: 200;
-	src: url('https://sf.abarba.me/SF-UI-Text-Light.otf');
+	src: url('fonts/SF-UI-Text-Light.otf');
 }
 
 @font-face {
 	font-family: 'SF Display Semibold';
 	font-weight: 600;
-	src: url('https://sf.abarba.me/SF-UI-Display-Semibold.otf');
+	src: url('fonts/SF-UI-Display-Semibold.otf');
 }
 
 ::-webkit-scrollbar {
@@ -62,6 +62,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
 }
 
 header {
