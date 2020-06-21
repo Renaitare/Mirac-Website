@@ -45,14 +45,6 @@ self.addEventListener('fetch', event => {
 		return;
 	}
 
-	if (
-		url.origin === self.origin &&
-		routes.find(route => route.pattern.test(url.pathname))
-	) {
-		event.respondWith(caches.match('/service-worker-index.html'));
-		return;
-	}
-
 	if (event.request.cache === 'only-if-cached') return;
 	event.respondWith(
 		caches.open(`offline${timestamp}`).then(async cache => {
