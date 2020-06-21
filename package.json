@@ -1,12 +1,11 @@
 {
-	"name": "mirac-sapper",
-	"description": "Mirac's Website",
+	"name": "mellow",
+	"description": "Project Mellow | A Sapper Server",
 	"license": "MIT",
 	"version": "1.0.0",
 	"scripts": {
 		"dev": "sapper dev",
-		"build": "sapper build --legacy",
-		"export": "sapper export --legacy",
+		"build": "sapper build",
 		"start": "node __sapper__/build"
 	},
 	"dependencies": {
