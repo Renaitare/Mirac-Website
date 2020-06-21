@@ -1,4 +1,4 @@
-import { timestamp, files, shell } from '@sapper/service-worker';
+import { timestamp, files, shell, routes } from '@sapper/service-worker';
 
 const ASSETS = `cache${timestamp}`;
 const to_cache = shell.concat(files);
@@ -42,6 +42,14 @@ self.addEventListener('fetch', event => {
 
 	if (url.host === self.location.host && cached.has(url.pathname)) {
 		event.respondWith(caches.match(event.request));
+		return;
+	}
+
+	if (
+		url.origin === self.origin &&
+		routes.find(route => route.pattern.test(url.pathname))
+	) {
+		event.respondWith(caches.match('/service-worker-index.html'));
 		return;
 	}
 

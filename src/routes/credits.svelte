@@ -23,7 +23,7 @@
 		<div class="credits-credits-section">
 			<img src="assets/profiles/renai.png" alt="profile" />
 			<div class="credits-text">
-				<h4>B A C K E N D &nbsp; D E V E L O P M E N T</h4>
+				<p>B A C K E N D &nbsp; D E V E L O P M E N T</p>
 				<h1>Renaitare</h1>
 				<div class="social-links">
 					<a href="mailto:support@renai.me">
@@ -41,7 +41,7 @@
 		<div class="credits-credits-section">
 			<img src="assets/profiles/mirac.png" alt="profile" />
 			<div class="credits-text">
-				<h4>F R O N T E N D &nbsp; D E V E L O P M E N T</h4>
+				<p>F R O N T E N D &nbsp; D E V E L O P M E N T</p>
 				<h1>Mirac</h1>
 				<div class="social-links">
 					<a href="mailto:ozd.mirac@gmail.com">
