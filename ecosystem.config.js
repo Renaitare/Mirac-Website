@@ -5,7 +5,7 @@ module.exports = {
 			script: '__sapper__/build',
 			env: {
 				NODE_ENV: 'production',
-				PORT: 3000,
+				PORT: 4000,
 			},
 		},
 	],
