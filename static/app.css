@@ -259,7 +259,7 @@ header {
 	border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.screenshots-wrapper p {
+.spacer {
 	display: inline-block;
 	width: 24px;
 	padding-left: 24px;
@@ -421,12 +421,6 @@ header {
 	width: 128px;
 	border-radius: 8px;
 	border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.related-wrapper p {
-	display: inline-block;
-	width: 24px;
-	padding-left: 24px;
 }
 
 #creditspage {

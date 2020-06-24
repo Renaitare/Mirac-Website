@@ -77,7 +77,7 @@
 				{#each data.screenshots as shot}
 					<img src={shot.image.url} alt={`${data.name} Image`} />
 				{/each}
-				<p />
+				<div class="spacer" />
 			</div>
 		</div>
 		<div class="seperator" />
@@ -153,7 +153,7 @@
 								alt={`${wallpaper.name} Image`} />
 						</a>
 					{/each}
-					<p />
+					<div class="spacer" />
 				</div>
 			</div>
 		{/if}
