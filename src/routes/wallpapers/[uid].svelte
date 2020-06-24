@@ -67,8 +67,8 @@
 					</a>
 				</div>
 			</div>
+			<div class="seperator" />
 		{/if}
-		<div class="seperator" />
 		<div class="screenshots-section">
 			<div class="subtitle" id="screenshots-title">
 				<h1>Preview</h1>
@@ -156,8 +156,8 @@
 					<div class="spacer" />
 				</div>
 			</div>
+			<div class="seperator" />
 		{/if}
-		<div class="seperator" />
 		<div class="footer" id="wppagefooter">
 			<p>©{new Date().getFullYear()}, Mirac</p>
 			<a href="/credits">
