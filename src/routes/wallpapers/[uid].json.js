@@ -35,7 +35,7 @@ export async function get(req, res, next) {
 				related.push({
 					name: data.wallpaper.data.name[0].text,
 					preview: data.wallpaper.data.preview.url,
-					uid: data.wallpaper.slug,
+					uid: data.wallpaper.uid,
 				});
 			}
 		});
