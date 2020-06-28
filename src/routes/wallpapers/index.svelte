@@ -4,6 +4,7 @@
 	export async function preload(page, session) {
 		let wallpapers = await Client.query('', {
 			orderings: '[my.wallpaper.date desc]',
+			pageSize: 100,
 		});
 
 		wallpapers = wallpapers.results;
