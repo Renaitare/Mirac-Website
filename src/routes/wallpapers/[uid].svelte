@@ -11,6 +11,7 @@
 </script>
 
 <script>
+	import { fade, slide } from 'svelte/transition';
 	export let data;
 	export let uid;
 </script>
@@ -36,7 +37,10 @@
 	<div class="wallprev-container">
 		<div class="top-image">
 			<div class="top-image-background">
-				<img src={data.header} alt={`${data.name} Header`} />
+				<img
+					transition:fade
+					src={data.header}
+					alt={`${data.name} Header`} />
 			</div>
 			<div class="top-image-overlay" />
 			<div class="top-image-elements">
@@ -56,7 +60,7 @@
 			</div>
 		</div>
 		{#if data.credits}
-			<div class="credits-section">
+			<div class="credits-section" transition:slide>
 				<p>{data.credits.primary.text[0].text}</p>
 				<div class="user">
 					<img
@@ -75,7 +79,10 @@
 			</div>
 			<div class="screenshots-wrapper">
 				{#each data.screenshots as shot}
-					<img src={shot.image.url} alt={`${data.name} Image`} />
+					<img
+						transition:fade
+						src={shot.image.url}
+						alt={`${data.name} Image`} />
 				{/each}
 				<div class="spacer" />
 			</div>
@@ -149,6 +156,7 @@
 					{#each data.related as wallpaper}
 						<a href={`/wallpapers/${wallpaper.uid}`}>
 							<img
+								transition:fade
 								src={wallpaper.preview}
 								alt={`${wallpaper.name} Image`} />
 						</a>

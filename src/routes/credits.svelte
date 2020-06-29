@@ -1,3 +1,7 @@
+<script>
+	import { fade } from 'svelte/transition';
+</script>
+
 <svelte:head>
 	<title>Credits</title>
 	<link rel="canonical" href="https://thatmirac.com/credits/" />
@@ -16,7 +20,7 @@
 </svelte:head>
 
 <main>
-	<div class="wallprev-container" id="creditspage">
+	<div class="wallprev-container" id="creditspage" transition:fade>
 		<div class="credits-title">
 			<h1>CREDITS</h1>
 		</div>

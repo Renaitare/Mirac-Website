@@ -13,6 +13,7 @@
 </script>
 
 <script>
+	import { fade } from 'svelte/transition';
 	export let wallpapers;
 </script>
 
@@ -33,7 +34,7 @@
 	<meta name="description" content="Wallpapers by Mirac" />
 </svelte:head>
 
-<main>
+<main transition:fade>
 	<div class="showcase">
 		<span>
 			<h1>WALLPAPERS</h1>
