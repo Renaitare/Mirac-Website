@@ -11,7 +11,7 @@
 </script>
 
 <script>
-	import { fade, slide } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	export let data;
 	export let uid;
 </script>
@@ -60,7 +60,7 @@
 			</div>
 		</div>
 		{#if data.credits}
-			<div class="credits-section" transition:slide>
+			<div class="credits-section">
 				<p>{data.credits.primary.text[0].text}</p>
 				<div class="user">
 					<img
