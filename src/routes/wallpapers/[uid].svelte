@@ -11,7 +11,7 @@
 </script>
 
 <script>
-	import { fade } from 'svelte/transition';
+	import Lazy from 'svelte-lazy';
 	export let data;
 	export let uid;
 </script>
@@ -37,10 +37,9 @@
 	<div class="wallprev-container">
 		<div class="top-image">
 			<div class="top-image-background">
-				<img
-					transition:fade
-					src={data.header}
-					alt={`${data.name} Header`} />
+				<Lazy>
+					<img src={data.header} alt={`${data.name} Header`} />
+				</Lazy>
 			</div>
 			<div class="top-image-overlay" />
 			<div class="top-image-elements">
@@ -77,15 +76,14 @@
 			<div class="subtitle" id="screenshots-title">
 				<h1>Preview</h1>
 			</div>
-			<div class="screenshots-wrapper">
-				{#each data.screenshots as shot}
-					<img
-						transition:fade
-						src={shot.image.url}
-						alt={`${data.name} Image`} />
-				{/each}
-				<div class="spacer" />
-			</div>
+			<Lazy>
+				<div class="screenshots-wrapper">
+					{#each data.screenshots as shot}
+						<img src={shot.image.url} alt={`${data.name} Image`} />
+					{/each}
+					<div class="spacer" />
+				</div>
+			</Lazy>
 		</div>
 		<div class="seperator" />
 		<div class="sizes-section">
@@ -156,7 +154,6 @@
 					{#each data.related as wallpaper}
 						<a href={`/wallpapers/${wallpaper.uid}`}>
 							<img
-								transition:fade
 								src={wallpaper.preview}
 								alt={`${wallpaper.name} Image`} />
 						</a>
